@@ -1,0 +1,136 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TECH-TALK</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-tech fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="bi bi-cpu"></i> TECH-TALK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-light btn-sm me-2" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="btn btn-primary btn-sm" href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h3 class="card-title text-center text-primary mb-4">Login to Your Account</h3>
+                            <form id="loginForm">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email or Username</label>
+                                    <input type="text" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="password" required>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary">Login</button>
+                                </div>
+                            </form>
+                            <div class="text-center mt-3">
+                                <small>Don't have an account? <a href="signup.html">Sign Up</a></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+
+            if ((email === "admin" || email === "admin@tech-talk.ph") && password === "password123") {
+                alert("Login successful!");
+                window.location.href = "index.html";
+            } else {
+                alert("Invalid username or password.");
+            }
+        });
+    </script>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <h5><i class="bi bi-cpu"></i> TECH-TALK PH</h5>
+                        <p>Your trusted source for tech reviews, news, and guides in the Philippines. We help you make informed decisions about technology.</p>
+                        <div class="social-icons">
+                            <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-white me-2"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-2 mb-3">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html" class="text-white">Home</a></li>
+                            <li><a href="blog.html" class="text-white">Blog</a></li>
+                            <li><a href="reviews.html" class="text-white">Reviews</a></li>
+                            <li><a href="about.html" class="text-white">About</a></li>
+                            <li><a href="contact.html" class="text-white">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <h5>Categories</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white">Smartphones</a></li>
+                            <li><a href="#" class="text-white">Laptops & PCs</a></li>
+                            <li><a href="#" class="text-white">Audio & Headphones</a></li>
+                            <li><a href="#" class="text-white">Gaming</a></li>
+                            <li><a href="#" class="text-white">Smart Home</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <h5>Contact Us</h5>
+                        <address>
+                            <p><i class="bi bi-geo-alt"></i> 123 Bonifacio Global City, Taguig</p>
+                            <p><i class="bi bi-envelope"></i> info@tech-talk.ph</p>
+                            <p><i class="bi bi-telephone"></i> (02) 8123-4567</p>
+                        </address>
+                    </div>
+                </div>
+                <hr>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; 2025 TECH-TALK Philippines. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <p><a href="#" class="text-white">Privacy Policy</a> | <a href="#" class="text-white">Terms of Service</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+</body>
+</html>
+

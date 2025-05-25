@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TECH-TALK - Your Source for Tech Reviews</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Override navbar colors for black text */
+      nav.navbar {
+        background-color: rgb(10, 35, 81) !important; /* Bootstrap light bg */
+      }
+      nav.navbar .navbar-brand, 
+      nav.navbar .nav-link,
+      nav.navbar .btn-outline-light {
+        color: #ffffff !important;
+      }
+      nav.navbar .btn-outline-light {
+        border-color: #ffffff !important;
+      }
+      nav.navbar .btn-outline-light:hover {
+        background-color: rgba(255, 255, 255, 0.75) !important;
+        color: #fff !important;
+      }
+      nav.navbar .btn-primary {
+        color: #fff !important;
+        background-color: #0d6efd !important;
+        border-color: #0d6efd !important;
+      }
+      nav.navbar .btn-primary:hover {
+        background-color: #0b5ed7 !important;
+        border-color: #0a58ca !important;
+      }
+      /* Toggler icon color */
+      .navbar-toggler-icon {
+        filter: invert(1);
+      }
+    </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="bi bi-cpu"></i> TECH-TALK
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-light btn-sm me-2" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary btn-sm" href="signup.html">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Carousel -->
+  <div
+    id="heroCarousel"
+    class="carousel slide"
+    data-bs-ride="carousel"
+    style="margin-top: 56px"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=600&q=80"
+          class="d-block w-100"
+          alt="Latest Tech Reviews"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Latest Tech Reviews</h2>
+          <p>
+            Discover our in-depth analysis of the newest gadgets available in
+            the Philippines
+          </p>
+          <a href="reviews.html" class="btn btn-primary">Read Reviews</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=600&q=80"
+          class="d-block w-100"
+          alt="Tech News"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Breaking Tech News</h2>
+          <p>Stay updated with the latest developments in the Philippine tech scene</p>
+          <a href="blog.html" class="btn btn-primary">Read News</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=600&q=80"
+          class="d-block w-100"
+          alt="Tech Guides"
+        />
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Expert Tech Guides</h2>
+          <p>Learn how to make the most of your devices with our detailed guides</p>
+          <a href="blog.html" class="btn btn-primary">View Guides</a>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#heroCarousel"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#heroCarousel"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Featured Content Section -->
+  <section class="featured-content py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Featured Content</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 tech-card">
+            <img
+              src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              class="card-img-top"
+              alt="Smartphone Review"
+            />
+            <div class="card-body">
+              <span class="badge bg-primary mb-2">Review</span>
+              <h5 class="card-title">iPhone 15 Pro Max: The Ultimate Review</h5>
+              <p class="card-text">
+                Is Apple's latest flagship worth the upgrade in the Philippines?
+                We dive deep into all the new features and local pricing.
+              </p>
+              <!-- Changed link to modal trigger -->
+              <a
+                href="#"
+                class="btn btn-outline-primary read-more-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#ebookModal"
+                data-title="iPhone 15 Pro Max: The Ultimate Review"
+              >Read More</a>
+            </div>
+            <div class="card-footer text-muted">
+              <i class="bi bi-calendar"></i> March 25, 2025
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 tech-card">
+            <img
+              src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              class="card-img-top"
+              alt="Gaming Laptop"
+            />
+            <div class="card-body">
+              <span class="badge bg-success mb-2">Guide</span>
+              <h5 class="card-title">Best Gaming Laptops of 2023 in the Philippines</h5>
+              <p class="card-text">
+                Our comprehensive guide to the top gaming laptops that deliver
+                exceptional performance for every budget in the local market.
+              </p>
+              <!-- Changed link to modal trigger -->
+              <a
+                href="#"
+                class="btn btn-outline-primary read-more-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#ebookModal"
+                data-title="Best Gaming Laptops of 2023 in the Philippines"
+              >Read More</a>
+            </div>
+            <div class="card-footer text-muted">
+              <i class="bi bi-calendar"></i> March 20, 2025
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 tech-card">
+            <img
+              src="https://images.unsplash.com/photo-1677442135136-760c813028c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              class="card-img-top"
+              alt="Wireless Earbuds"
+            />
+            <div class="card-body">
+              <span class="badge bg-warning text-dark mb-2">Review</span>
+              <h5 class="card-title">Top Wireless Earbuds for 2025</h5>
+              <p class="card-text">
+                Find out which wireless earbuds offer the best sound quality,
+                battery life, and value for money here in the Philippines.
+              </p>
+              <!-- Changed link to modal trigger -->
+              <a
+                href="#"
+                class="btn btn-outline-primary read-more-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#ebookModal"
+                data-title="Top Wireless Earbuds for 2025"
+              >Read More</a>
+            </div>
+            <div class="card-footer text-muted">
+              <i class="bi bi-calendar"></i> March 18, 2025
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Reviews Section -->
+  <section class="latest-reviews bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Latest Reviews</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card h-100 tech-card">
+            <img
+              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              class="card-img-top"
+              alt="Smart TV"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Samsung QLED Smart TV 2025 Review</h5>
+              <p class="card-text">
+                Experience vivid colors and smart features tailored for the
+                Filipino household.
+              </p>
+              <!-- Changed link to modal trigger -->
+              <a
+                href="#"
+                class="btn btn-primary read-review-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#ebookModal"
+                data-title="Samsung QLED Smart TV 2025 Review"
+              >Read Review</a>
+            </div>
+            <div class="card-footer text-muted">
+              <i class="bi bi-calendar"></i> March 15, 2025
+            </div>
+          </div>
+        </div>
+      
+  </section>
+
+  <!-- Modal for EBook Read More -->
+  <div
+    class="modal fade"
+    id="ebookModal"
+    tabindex="-1"
+    aria-labelledby="ebookModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form id="ebookForm">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ebookModalLabel">Read More</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Please provide your details before accessing the eBook:</p>
+            <div class="mb-3">
+              <label for="userName" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="userName"
+                required
+                placeholder="Your full name"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="userEmail" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="userEmail"
+                required
+                placeholder="name@example.com"
+              />
+            </div>
+            <input type="hidden" id="ebookTitle" />
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Read the eBook</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-tech text-light py-4 mt-5">
+    <div class="container text-center small">
+      <p>
+        &copy; 2025 TECH-TALK. All Rights Reserved. |
+        <a href="terms.html" class="text-light">Terms of Service</a> |
+        <a href="privacy.html" class="text-light">Privacy Policy</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // When modal opens, set the title dynamically based on clicked button
+    const ebookModal = document.getElementById("ebookModal");
+    const ebookTitleInput = document.getElementById("ebookTitle");
+    const ebookModalLabel = document.getElementById("ebookModalLabel");
+
+    ebookModal.addEventListener("show.bs.modal", (event) => {
+      const button = event.relatedTarget; // Button that triggered the modal
+      const title = button.getAttribute("data-title") || "Read More";
+      ebookModalLabel.textContent = title;
+      ebookTitleInput.value = title;
+      // Clear previous input
+      document.getElementById("userName").value = "";
+      document.getElementById("userEmail").value = "";
+    });
+
+    // Handle form submit
+    document.getElementById("ebookForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("userName").value.trim();
+      const email = document.getElementById("userEmail").value.trim();
+      const title = ebookTitleInput.value;
+
+      if (!name || !email) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      // Simulate eBook reading link or action
+      alert(
+        `Thank you, ${name}! You can now read the eBook titled: "${title}". (This is a placeholder action.)`
+      );
+
+      // Close modal
+      const modalInstance = bootstrap.Modal.getInstance(ebookModal);
+      modalInstance.hide();
+    });
+  </script>
+   <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5><i class="bi bi-cpu"></i> TECH-TALK PH</h5>
+          <p>Your trusted source for tech reviews, news, and guides in the Philippines.</p>
+          <div>
+            <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white me-2"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-md-2 mb-3">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white">Home</a></li>
+            <li><a href="blog.html" class="text-white">Blog</a></li>
+            <li><a href="reviews.html" class="text-white">Reviews</a></li>
+            <li><a href="about.html" class="text-white">About</a></li>
+            <li><a href="contact.html" class="text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-3">
+          <h5>Categories</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Smartphones</a></li>
+            <li><a href="#" class="text-white">Laptops & PCs</a></li>
+            <li><a href="#" class="text-white">Audio & Headphones</a></li>
+            <li><a href="#" class="text-white">Gaming</a></li>
+            <li><a href="#" class="text-white">Smart Home</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-3">
+          <h5>Contact Us</h5>
+          <p><i class="bi bi-geo-alt"></i> 123 Bonifacio Global City, Taguig</p>
+          <p><i class="bi bi-envelope"></i> info@tech-talk.ph</p>
+          <p><i class="bi bi-telephone"></i> (02) 8123-4567</p>
+        </div>
+      </div>
+      <hr />
+      <div class="text-center">
+        <p>&copy; 2025 TECH-TALK Philippines. All rights reserved. | <a href="#" class="text-white">Privacy Policy</a> | <a href="#" class="text-white">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
